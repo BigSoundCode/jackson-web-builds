@@ -2,20 +2,184 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1e1e1e;  /* VSCode dark background */
+  --foreground: #d4d4d4;  /* VSCode text color */
+  --surface: #252526;     /* VSCode sidebar background */
+  --hover: #2a2d2e;      /* VSCode hover state */
+  --border: #323232;     /* VSCode border color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  letter-spacing: -0.025em;
+}
+
+/* Animation utility classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smooth transitions */
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Glass effect */
+.glass-effect {
+  @apply backdrop-blur-lg bg-[#252526]/80;
+}
+
+/* Modern effects */
+.text-glow {
+  text-shadow: 0 0 15px theme('colors.primary.light/20');
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#90EE90] to-[#32CD32] font-bold;
+}
+
+/* Animation classes */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg shadow-primary/20;
+}
+
+.card-hover {
+  @apply transition-all duration-300 
+         bg-[#252526] hover:bg-[#2a2d2e]
+         shadow-sm hover:shadow-xl 
+         hover:-translate-y-1 
+         border border-[#323232]
+         hover:border-primary/20;
+}
+
+/* Feature card */
+.feature-card {
+  @apply bg-[#252526] rounded-lg p-6 
+         border border-[#323232]
+         shadow-sm
+         hover:shadow-lg hover:shadow-primary/10 
+         hover:border-primary/20 
+         hover:bg-[#2a2d2e]
+         transition-all duration-300;
+}
+
+/* Accent elements */
+.accent-element {
+  @apply text-accent font-bold;
+}
+
+/* Interactive elements */
+.interactive-hover {
+  @apply transition-colors duration-200 
+         hover:text-primary-dark 
+         active:text-primary-light;
+}
+
+/* 3D Flip Card */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Smooth entrance animation */
+.smooth-entrance {
+  @apply opacity-0 translate-y-4;
+  animation: smoothEntrance 0.6s ease-out forwards;
+}
+
+@keyframes smoothEntrance {
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#1e1e1e];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#424242] rounded-full hover:bg-[#525252] transition-colors;
 }

@@ -11,6 +11,21 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          DEFAULT: "#ffffff", // White
+          light: "#f3f4f6",   // Light gray
+          dark: "#e5e7eb"     // Dark gray
+        },
+        secondary: {
+          DEFAULT: "#00ff00", // Lime green
+          light: "#4dff4d",   // Light lime
+          dark: "#00cc00"     // Dark lime
+        },
+        accent: {
+          DEFAULT: "#00ff00", // Keep lime green as an accent
+          light: "#4dff4d",
+          dark: "#00cc00"
+        }
       },
     },
   },
