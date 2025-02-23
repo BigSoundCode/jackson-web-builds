@@ -136,7 +136,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-150 disabled:bg-gray-600 font-semibold"
+            className="w-full bg-secondary text-black py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-150 disabled:bg-gray-600 font-semibold"
           >
             {isLoading ? 'Sending...' : 'Send Message'}
           </button>
