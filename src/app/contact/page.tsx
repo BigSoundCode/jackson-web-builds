@@ -160,7 +160,7 @@ export default function Contact() {
         className="text-center mt-12"
       >
         <TypeWriter 
-          text="Alternatively, email us at info@jacksonwebbuilds.ca"
+          text="We look forward to hearing from you!"
           speed={75}
           className="text-gray-300 text-lg"
         />
