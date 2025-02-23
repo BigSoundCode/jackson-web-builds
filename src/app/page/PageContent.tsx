@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import FlipCard from '@/components/FlipCard';
 
 export default function PageContent() {
@@ -20,7 +19,7 @@ export default function PageContent() {
           </h1>
 
           <p className="text-xl text-gray-300 mb-8">
-            We create professional, modern websites and software tailored to your needs, specializing in solutions for small businesses in the construction industry.
+            We create professional, modern websites and software tailored to your needs, specializing in solutions for small & medium businesses in the construction industry.
           </p>
 
           <a 
@@ -48,7 +47,7 @@ export default function PageContent() {
             { title: "Smooth Animations", description: "Engaging user experiences with fluid animations" },
             { title: "Performance", description: "Lightning-fast load times and optimized code" },
             { title: "Custom Solutions", description: "Tailored development for your specific needs" }
-          ].map((feature, index) => (
+          ].map((feature) => (
             <div
               key={feature.title}
               className="feature-card hover:-translate-y-1 transition-all duration-150"

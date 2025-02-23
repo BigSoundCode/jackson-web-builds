@@ -91,7 +91,7 @@ export default function Contact() {
       >
         <h1 className="text-5xl font-bold mb-8 gradient-text text-center">Contact Us</h1>
         <p className="text-gray-300 text-center mb-12 text-lg">
-          Let's discuss how we can help with your next project
+          Let&apos;s discuss how we can help with your next project
         </p>
       </motion.div>
 

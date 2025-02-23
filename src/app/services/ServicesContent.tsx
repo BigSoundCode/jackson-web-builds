@@ -53,7 +53,7 @@ export default function ServicesContent() {
         </motion.h1>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="bg-[#252526]/95 backdrop-blur-sm rounded-lg p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-150 border border-white/20 hover:border-white/40 hover:shadow-white/10"
